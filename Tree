@@ -1,0 +1,36 @@
+#!/usr/local/bin/python
+# Aaron Cantu
+# Create a program that  prints out a tree design.
+# 3/23/22
+
+# variables that are needed to make the tree
+count = 1
+c = '^'
+s = '*'
+i = 0
+j = 0
+
+# List to use as a switch-case statement
+spaces = {
+            0: "          ",
+            1: "         ",
+            2: "        ",
+            3: "       ",
+            4: "      ",
+            5: "     ",
+        }
+
+# Loop to create the tree.
+# to ensure the print statement didn't do an automatic new line
+# the feature of end= was needed for each print statement 
+for i in range(6):
+
+    print(spaces[i], end="")
+    if i == 0 or i == 2 or i == 4:
+        for j in range(count):
+            print(s, end=""),
+    else:
+        for j in range(count):
+            print(c, end="")
+    print("\n")
+    count +=2
